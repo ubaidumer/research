@@ -1,0 +1,329 @@
+{
+	"variables": [],
+	"info": {
+		"name": "1stWeekTask",
+		"_postman_id": "0f7ed858-d4b7-7be9-d7bc-19c30504aa38",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"description": "",
+			"item": [
+				{
+					"name": "View All Students",
+					"request": {
+						"url": "http://localhost:3000/student",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "",
+									"type": "file",
+									"src": "6.PNG"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View All Courses",
+					"request": {
+						"url": "http://localhost:3000/course",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"description": "",
+									"type": "file"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View All Students who registered",
+					"request": {
+						"url": "http://localhost:3000/course_management/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"course_id\":\"1\",\n\t\"student_id\":\"2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Course by id",
+					"request": {
+						"url": "http://localhost:3000/course/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"course_id\":\"1\",\n\t\"student_id\":\"2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Serach student by name or email",
+					"request": {
+						"url": "http://localhost:3000/student/info/ubaid5",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"course_id\":\"1\",\n\t\"student_id\":\"2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search student by id",
+					"request": {
+						"url": "http://localhost:3000/student/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"course_id\":\"1\",\n\t\"student_id\":\"2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Course by name",
+					"request": {
+						"url": "http://localhost:3000/course/info/math",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"course_id\":\"1\",\n\t\"student_id\":\"2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"description": "",
+			"item": [
+				{
+					"name": "Create New Course",
+					"request": {
+						"url": "http://localhost:3000/course",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"coursename\":\"MAth\",\n\t\"studentlimit\":\"80\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Course-Management",
+					"request": {
+						"url": "http://localhost:3000/course_management",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"course_id\":\"1\",\n\t\"student_id\":\"2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Student",
+					"request": {
+						"url": "http://localhost:3000/student",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "       {\n        \"firstname\": \"ubaid\",\n        \"lastname\": \"umer\",\n        \"username\": \"ubaid52\",\n        \"email\": \"ubaid.ume2r@gmail.com\",\n        \"password\": \"ubasud928$W\",\n        \"address\": null,\n        \"phonenumber\": \"23121231142\",\n        \"image\": \"aisdoashdohasodho\"\n        }"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Put",
+			"description": "",
+			"item": [
+				{
+					"name": "Update Student",
+					"request": {
+						"url": "http://localhost:3000/student/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "       {\n        \"firstname\": \"ubaid\",\n        \"lastname\": \"umer\",\n        \"username\": \"ubaid52\",\n        \"email\": \"ubaid.ume2r@gmail.com\",\n        \"password\": \"ubasud928$W\",\n        \"address\": null,\n        \"phonenumber\": \"23121231142\",\n        \"image\": \"aisdoashdohasodho\"\n        }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"url": "http://localhost:3000/course/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "       {\n       \t\"coursename\":\"Hindi\",\n \"studentlimit\":\"21\"\n        }"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"description": "",
+			"item": [
+				{
+					"name": "Delete Course",
+					"request": {
+						"url": "http://localhost:3000/course/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"url": "http://localhost:3000/student/1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
