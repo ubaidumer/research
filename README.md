@@ -1,5 +1,14 @@
 #
-Install: npm i
+Install packages
+$ npm install
+#
+Install PostgresSQL Database
+Make a Database as Course_Management in course-backend and rabbitmq-example microservices
+#
+download keycloak
+make a realm as 'hero'
+make a client as 'react'
+make a user
 #
 Run Both Microservcies 
 #
